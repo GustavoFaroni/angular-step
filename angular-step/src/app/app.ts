@@ -7,5 +7,7 @@ import { Component, signal } from '@angular/core';
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('angular-step');
+  numero: number = 1523;
+  data: string = '2024-07-08';
+  valorMercadoria: number = 180.25
 }
