@@ -8,10 +8,13 @@ import { Dashboard } from './dashboard/dashboard';
 import { Rotas } from './rotas/rotas';
 import { PainelAdm } from './painel-adm/painel-adm';
 import { Frete } from './frete/frete';
+import { Card } from './card/card';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
-  declarations: [App, Dashboard, Rotas, PainelAdm, Frete],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  declarations: [App, Dashboard, Rotas, PainelAdm, Frete, Card],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, MatCardModule, MatButtonModule],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],
 })
