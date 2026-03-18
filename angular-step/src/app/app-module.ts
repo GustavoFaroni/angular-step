@@ -9,12 +9,14 @@ import { Rotas } from './rotas/rotas';
 import { PainelAdm } from './painel-adm/painel-adm';
 import { Frete } from './frete/frete';
 import { Card } from './card/card';
-import {MatButtonModule} from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { TablePeople } from './table-people/table-people';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
-  declarations: [App, Dashboard, Rotas, PainelAdm, Frete, Card],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, MatCardModule, MatButtonModule],
+  declarations: [App, Dashboard, Rotas, PainelAdm, Frete, Card, TablePeople],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, MatCardModule, MatButtonModule, MatTableModule],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],
 })
