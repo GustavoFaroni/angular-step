@@ -1,4 +1,5 @@
 import { Component, AfterViewInit } from '@angular/core';
+import { environment } from '../../environments/environment';
 
 declare var google: any;
 
@@ -28,8 +29,14 @@ export class Maps implements AfterViewInit {
       return;
     }
 
+    const apiKey = environment.googleMapsApiKey;
+    if (!apiKey) {
+      console.error('Google Maps API key não configurada. Rode npm run sync-env e reinicie.');
+      return;
+    }
+
     const script = document.createElement('script');
-    script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyBMpgO6VOw5wquWGY67eFlPqUbaxcBGgV8&libraries=places`;
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=places`;
     script.async = true;
     script.defer = true;
     script.onload = () => this.initMap();
