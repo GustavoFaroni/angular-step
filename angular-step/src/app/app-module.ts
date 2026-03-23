@@ -14,10 +14,20 @@ import { MatCardModule } from '@angular/material/card';
 import { TablePeople } from './table-people/table-people';
 import { MatTableModule } from '@angular/material/table';
 import { MatTab, MatTabGroup } from '@angular/material/tabs';
+import { Maps } from './maps/maps';
 
 @NgModule({
-  declarations: [App, Dashboard, Rotas, PainelAdm, Frete, Card, TablePeople],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, MatCardModule, MatTab, MatTabGroup, MatButtonModule, MatTableModule],
+  declarations: [App, Dashboard, Rotas, PainelAdm, Frete, Card, TablePeople, Maps],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    MatCardModule,
+    MatTab,
+    MatTabGroup,
+    MatButtonModule,
+    MatTableModule,
+  ],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],
 })

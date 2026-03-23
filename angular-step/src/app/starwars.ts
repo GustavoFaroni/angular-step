@@ -7,10 +7,10 @@ import { Injectable } from '@angular/core';
 export class Starwars {
   constructor(private http: HttpClient){}
 
-    apiUrl : string = ''
+    apiUrl : string = 'https://swapi.dev/api/people'
 
     getPeople(){
-      return this.http.get('https://swapi.dev/api/people')
+      return this.http.get(this.apiUrl)
 
     }
 }
